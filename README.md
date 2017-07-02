@@ -41,9 +41,9 @@ To combine the individual knowledge base of the separate control systems, new me
 
 To achieve this bias, the position control share only the most contrasting membership functions (NL and PL) in the output (observe the flat surfaces in figure above). It was found that having no overlap between these NL and PL in the output introduced a constant time lag in the response to target position. It was also found that the time lag was directly proportional to an overlap between NL and PL in the output. Therefore a small overlapping region has been introduced. This also serves the purpose of having a decaying control over the position as the angle control needs to be more dominating. Table below shows the three rules employed in achieving the position control.
 
-    |        |Left     | Stable  | Right |
-    |--------|---------|---------|-------|
-    |Left    | NL      |    -    | -     |
-    |Stable  |  -      |Z        | -     |
-    |Right   |  -      | -       | PL    |
+|        | Left | Stable | Right |
+|--------|------|--------|-------|
+| Left   | NL   | -      | -     |
+| Stable | -    | |Z     | -     |
+| Right  | -    | -      | PL    |
 
