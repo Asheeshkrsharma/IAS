@@ -72,5 +72,7 @@ To observe the bias in much more clarity, the system was initialized with a pole
 
 ## Run
 
-
+```
+/Inverted pendulum/Main.m
+```
 
