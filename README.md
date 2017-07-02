@@ -25,3 +25,5 @@ was needed between NM and PM or a stable state membership function. A ZE members
 
 ## Conclusions
 It was generally observed that large oscillation occurred when the position and angle control alternated to totally opposite outputs. Furthermore, it was harder to determine what was affecting the system due to too many governing rules and membership functions. Thus a simpler and more effective control was developed which inferences the output based on the angle and position in a single fuzzy inference system.
+
+---
