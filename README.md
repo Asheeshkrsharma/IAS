@@ -65,6 +65,8 @@ To verify the effectiveness of the proposed fuzzy controller, the control system
 
 To observe the bias in much more clarity, the system was initialized with a pole angle of $55^o$ and a target position of zero (Figure below). It can be observed that the pole angle decreases faster (becomes upright faster) than reaching the target position.
 
+![alt text](https://github.com/Asheeshkrsharma/IAS/blob/master/images/act3-1.png "Control result of the pendulum system for initial position 2 m")
+
 
 
 
