@@ -60,5 +60,11 @@ To achieve this bias, the position control share only the most contrasting membe
 ### Results
 To verify the effectiveness of the proposed fuzzy controller, the control system was stimulated with different situations. Firstly, the response time was observed. Figure 5 shows the reaction time observed with increasing initial pole angles. It can be seen that the control system is able to stabilize quickly. The Figure also shows the introduced bias in action when the angle was very big (55 degrees). 
 
+![alt text](https://github.com/Asheeshkrsharma/IAS/blob/master/images/act2-1.png "Impulse response with different initial pole angles
+")
+
 To observe the bias in much more clarity, the system was initialized with a pole angle of $55^o$ and a target position of zero (Figure below). It can be observed that the pole angle decreases faster (becomes upright faster) than reaching the target position.
+
+
+
 
