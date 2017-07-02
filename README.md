@@ -19,5 +19,9 @@ For [θ,˙θ] controller, Suppose the cart was stationary (not moving horizontal
 Using these insights, all others rules can also be derived. In the initial experiments, it was found that the cart kept oscillating even when the desired position had reached. This was because of two reasons. Firstly, due to no overlapping regions in the memberships of NM and PM Figure below . Secondly, due to lack of a membership function for a stable position. To resolve this issue, either an overlap
 was needed between NM and PM or a stable state membership function. A ZE membership function was introduced (a design choice).
 
+![alt text](https://github.com/Asheeshkrsharma/IAS/blob/master/images/dab-1.png "Memberships of separate inputs for Experiment 1")
+
+
+
 ## Conclusions
 It was generally observed that large oscillation occurred when the position and angle control alternated to totally opposite outputs. Furthermore, it was harder to determine what was affecting the system due to too many governing rules and membership functions. Thus a simpler and more effective control was developed which inferences the output based on the angle and position in a single fuzzy inference system.
