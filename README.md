@@ -1,4 +1,4 @@
-# Introduction
+## Introduction
 
 Balancing a broomstick in an upright position requires coordinated horizontal movement of hand based on the visual queues. This nonlinear and inherently unstable control problem is often considered to be a primary benchmark for evaluating the performance and response of new control methods because of its structural simplicities. The same problem is also known as an inverted pendulum. A two-dimensional inverted pendulum consists of a vertical pole freely hinged to a platform which can be driven in the horizontal direction using a belt or cart system.
 
@@ -25,7 +25,7 @@ was needed between NM and PM or a stable state membership function. A ZE members
 
 
 
-## Conclusions
+### Conclusions
 It was generally observed that large oscillation occurred when the position and angle control alternated to totally opposite outputs. Furthermore, it was harder to determine what was affecting the system due to too many governing rules and membership functions. Thus a simpler and more effective control was developed which inferences the output based on the angle and position in a single fuzzy inference system.
 
 ---
@@ -47,3 +47,15 @@ To achieve this bias, the position control share only the most contrasting membe
 | Stable | -    | |Z     | -     |
 | Right  | -    | -      | PL    |
 
+
+2. It was empirically found that angle control required a much finer control over the output than the position control. Therefore, two modifications were made. Firstly, exclusive output membership functions were constructed to achieve finer control over the balancing. Table below shows the nine rules used for governing the output. It can also be observed that "left" and right membership functions in all inputs share a small overlapping region centered at the "stable" membership function to achieve a smoother output.
+
+|        | Left | Stable | Right |
+|--------|------|--------|-------|
+| Left   | NL   | NM     | N     |
+| Stable | N    |  Z     | P     |
+| Right  | P    |  PM    | PL    |
+
+
+### Results
+To verify the effectiveness of the proposed fuzzy controller, the control system was stimulated with different situations. Firstly, the response time was observed. Figure 5 shows the reaction time observed with increasing initial pole angles. It can be seen that the control system is able to stabilize quickly\footnote{Note that figure 5 represents simulation result, therefore the time is not in seconds}. Figure 5 also shows the introduced bias in action when the angle was very big ($-55^o$). To observe the bias in much more clarity, the system was initialized with a pole angle of $55^o$ and a target position of zero (Figure 6). It can be observed that the pole angle decreases faster (becomes upright faster) than reaching the target position.
