@@ -6,3 +6,11 @@ Balancing a broomstick in an upright position requires coordinated horizontal mo
 
 The objective of this experiment was to develop inference systems for balancing and positioning separately. Secondly, to develop a switching system which decides which control to switch-off based on the pole angle. Both the fuzzy controllers, have two set input input variables ([θ, ˙θ] and [x, x˙]). Both sets of fuzzy inferences share the same output functions illustrated in figure below.
 
+          & NB     & NM     & ZE    & PM    & PB\\
+    \hline\addlinespace
+    PB     & ZE     & PM     & PM   & PB    & PB\\
+    PM     & NM     & Z      & PM   & PM    & PB\\
+    ZE     & NM     & NM     & ZE   & PM    & PM\\
+    NM     & NB     & NM     & NM   & ZE    & PM\\
+    NB     & NB     & NB     & NM   & NM    & ZE\\
+
