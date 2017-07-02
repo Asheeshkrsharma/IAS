@@ -1,0 +1,70 @@
+[System]
+Name='inference'
+Type='mamdani'
+Version=2.0
+NumInputs=4
+NumOutputs=1
+NumRules=12
+AndMethod='prod'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='sum'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='angle'
+Range=[-1 1]
+NumMFs=3
+MF1='left':'trimf',[-2 -1 0.6]
+MF2='right':'trimf',[-0.6 1 2]
+MF3='stable':'trimf',[-1 0 1]
+
+[Input2]
+Name='angle-velocity'
+Range=[-5 5]
+NumMFs=3
+MF1='left':'trimf',[-10 -5 2]
+MF2='right':'trimf',[-2 5 10]
+MF3='stable':'trimf',[-5 0 5]
+
+[Input3]
+Name='cart-position'
+Range=[-10 10]
+NumMFs=3
+MF1='left':'trimf',[-20 -10 4]
+MF2='right':'trimf',[-4 10 20]
+MF3='stable':'trimf',[-10 -1.11e-16 10]
+
+[Input4]
+Name='cart-velocity'
+Range=[-10 10]
+NumMFs=3
+MF1='left':'trimf',[-20 -10 2]
+MF2='right':'trimf',[-2 10 20]
+MF3='stable':'trimf',[-10 -1.11e-16 10]
+
+[Output1]
+Name='F'
+Range=[-200 200]
+NumMFs=7
+MF1='N':'trimf',[-100 -50 0]
+MF2='Z':'trimf',[-50 0 50]
+MF3='P':'trimf',[0 50 100]
+MF4='NL':'trapmf',[-400 -400 -100 50]
+MF5='NM':'trimf',[-150 -100 -50]
+MF6='PL':'trapmf',[-50 100 400 400]
+MF7='PM':'trimf',[50 100 150]
+
+[Rules]
+1 1 0 0, 4 (1) : 1
+1 3 0 0, 5 (1) : 1
+1 2 0 0, 1 (1) : 1
+3 1 0 0, 1 (1) : 1
+3 3 0 0, 2 (1) : 1
+3 2 0 0, 3 (1) : 1
+2 1 0 0, 3 (1) : 1
+2 3 0 0, 7 (1) : 1
+2 2 0 0, 6 (1) : 1
+0 0 1 1, 4 (1) : 1
+0 0 2 2, 6 (1) : 1
+0 0 3 3, 2 (1) : 1
