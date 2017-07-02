@@ -37,5 +37,7 @@ To combine the individual knowledge base of the separate control systems, new me
 
 1. From the aforementioned initial experiments, it was understood that the out of the two inference systems, the degree of importance of balancing has to be larger than positioning in order to stabilize the whole pendulum system. At the same time, the importance degree of the pendulum angle when the pendulum angle is big should almost be the same as the importance degree of the angular velocity when the angular velocity is big.  The same fact also applies to cart position and speed. That is, the importance degree of the cart position when the positive is big should almost be the same as the importance degree of the cart velocity when the velocity is big. 
 
+![alt text](https://github.com/Asheeshkrsharma/IAS/blob/master/images/mrmbership_surf-1.png "Surface of rule base")
+
 To achieve this bias, the position control share only the most contrasting membership functions (NL and PL) in the output (observe the flat surfaces in figure below). It was found that having no overlap between these NL and PL in the output introduced a constant time lag in the response to target position. It was also found that the time lag was directly proportional to an overlap between NL and PL in the output. Therefore a small overlapping region has been introduced. This also serves the purpose of having a decaying control over the position as the angle control needs to be more dominating. Table 2 shows the three rules employed in achieving the position control.
 
