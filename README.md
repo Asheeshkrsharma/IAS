@@ -67,6 +67,9 @@ To observe the bias in much more clarity, the system was initialized with a pole
 
 ![alt text](https://github.com/Asheeshkrsharma/IAS/blob/master/images/act3-1.png "Control result of the pendulum system for initial position 2 m")
 
+---
+
+## Run
 
 
 
